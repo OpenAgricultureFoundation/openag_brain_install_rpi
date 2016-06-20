@@ -45,7 +45,7 @@ sudo apt-get install -y couchdb
 mkdir -p ~/catkin_ws/src
 cd ~/catkin_ws/src
 catkin_init_workspace
-git clone https://github.com/OpenAgInitiative/openag_brain.git -b ros
+git clone https://github.com/OpenAgInitiative/openag_brain.git
 cd ~/catkin_ws
 catkin_make
 catkin_make install
