@@ -49,7 +49,7 @@ git clone https://github.com/OpenAgInitiative/openag_brain.git
 git clone https://github.com/OpenAgInitiative/openag_python.git
 cd openag_python
 python setup.py build
-sudo python.py install
+sudo python setup.py install
 cd ~/catkin_ws
 catkin_make
 catkin_make install
