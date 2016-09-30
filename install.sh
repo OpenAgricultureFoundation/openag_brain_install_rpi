@@ -46,6 +46,8 @@ mkdir -p ~/catkin_ws/src
 cd ~/catkin_ws/src
 catkin_init_workspace
 git clone https://github.com/OpenAgInitiative/openag_brain.git
+mkdir -p ~/openag/src
+cd ~/openag/src
 git clone https://github.com/OpenAgInitiative/openag_python.git
 cd openag_python
 python setup.py build
