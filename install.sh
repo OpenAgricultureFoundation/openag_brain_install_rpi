@@ -41,17 +41,18 @@ echo "source /opt/ros/indigo/setup.bash" >> ~/.bashrc
 # Install couchdb
 sudo apt-get install -y couchdb
 
+# Download  and install core openag python package
+mkdir -p ~/openag/src
+cd ~/openag/src
+git clone https://github.com/OpenAgInitiative/openag_python.git
+cd openag_python
+sudo pip install -e .
+
 # Create a catkin workspace to work in and install openag_brain in it
 mkdir -p ~/catkin_ws/src
 cd ~/catkin_ws/src
 catkin_init_workspace
 git clone https://github.com/OpenAgInitiative/openag_brain.git
-mkdir -p ~/openag/src
-cd ~/openag/src
-git clone https://github.com/OpenAgInitiative/openag_python.git
-cd openag_python
-python setup.py build
-sudo python setup.py install
 cd ~/catkin_ws
 catkin_make
 catkin_make install
