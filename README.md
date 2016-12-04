@@ -37,6 +37,12 @@ Running openag_brain happens through ROS, using the `rosrun` command:
 
 `openag_python` commands are available globally via the `openag` command.
 
+## Running as a service(background) using systemd
+
+You can set up openag_brain to run at startup using the linux builtin `systemctl` command:
+
+`sudo systemctl enable openag.service`
+
 ## Using for Development
 
 If you want to contribute to [openag_brain](https://github.com/OpenAgInitiative/openag_brain),
