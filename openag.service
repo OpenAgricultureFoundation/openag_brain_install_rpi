@@ -7,3 +7,4 @@ WantedBy=multi-user.target
 
 [Service]
 Type=simple
+ExecStart=/opt/openag_run.sh

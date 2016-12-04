@@ -60,7 +60,7 @@ source devel/setup.bash
 rosdep install -i -y openag_brain || exit 1
 
 # Create a service
-echo "ExecStart=$(pwd)/run.sh" >> ./openag.service
+cp ./run.sh /opt/openag_run.sh
 cp ./openag.service /lib/systemd/system/openag.service
 
 
