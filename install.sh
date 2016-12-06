@@ -59,4 +59,10 @@ catkin_make install
 source devel/setup.bash
 rosdep install -i -y openag_brain || exit 1
 
+# Create a service
+cp ./run.sh /opt/openag_run.sh
+cp ./openag.service /lib/systemd/system/openag.service
+
+
+
 rosrun openag_brain install_pio
