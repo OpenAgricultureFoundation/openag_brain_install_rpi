@@ -18,6 +18,10 @@ sudo pip install rosdep rosinstall_generator wstool
 sudo rosdep init
 rosdep update
 
+# Create a service
+cp ./run.sh /opt/openag_run.sh
+cp ./openag.service /lib/systemd/system/openag.service
+
 # Create a catkin workspace
 mkdir -p ~/ros_catkin_ws
 cd ~/ros_catkin_ws
@@ -58,11 +62,5 @@ catkin_make
 catkin_make install
 source devel/setup.bash
 rosdep install -i -y openag_brain || exit 1
-
-# Create a service
-cp ./run.sh /opt/openag_run.sh
-cp ./openag.service /lib/systemd/system/openag.service
-
-
 
 rosrun openag_brain install_pio
