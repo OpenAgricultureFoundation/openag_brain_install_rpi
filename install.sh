@@ -29,7 +29,7 @@ cd ~/ros_catkin_ws
 # Install ros_comm and rosserial
 echo Generating rosinstall file...
 rm -f indigo.rosinstall src/.rosinstall
-rosinstall_generator ros_comm rosserial rosserial_arduino usb_cam --rosdistro indigo --deps --wet-only --exclude roslisp --tar > indigo.rosinstall
+rosinstall_generator ros_comm rosserial rosserial_arduino --rosdistro indigo --deps --wet-only --exclude roslisp --tar > indigo.rosinstall
 wstool init src indigo.rosinstall
 
 # Install dependencies for all installed packages
