@@ -48,15 +48,27 @@ sudo apt-get install -y couchdb
 # Download  and install core openag python package
 mkdir -p ~/openag/src
 cd ~/openag/src
-git clone https://github.com/OpenAgInitiative/openag_python.git
-cd openag_python
+if [ -x openag_python ]; then
+    cd openag_python
+    git pull
+else
+    git clone https://github.com/OpenAgInitiative/openag_python.git
+    cd openag_python
+fi
 sudo pip install -e .
 
 # Create a catkin workspace to work in and install openag_brain in it
 mkdir -p ~/catkin_ws/src
 cd ~/catkin_ws/src
-catkin_init_workspace
-git clone https://github.com/OpenAgInitiative/openag_brain.git
+if [ ! -f ./CMakeLists.txt ]; then
+    catkin_init_workspace
+fi
+if [ -x openag_brain ]; then
+    cd openag_brain
+    git pull
+else
+    git clone https://github.com/OpenAgInitiative/openag_brain.git
+fi
 cd ~/catkin_ws
 catkin_make
 catkin_make install
