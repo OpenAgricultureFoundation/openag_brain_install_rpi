@@ -11,7 +11,7 @@ sudo apt-get update
 sudo apt-get -y upgrade
 
 # Install dependencies
-sudo apt-get install python-pip
+sudo apt-get install -y python-pip
 sudo pip install rosdep rosinstall_generator wstool
 
 # Initialize rosdep
