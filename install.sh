@@ -15,6 +15,9 @@ sudo apt-get install python-pip
 sudo pip install rosdep rosinstall_generator wstool
 
 # Initialize rosdep
+if [ -f /etc/ros/rosdep/sources.list.d/20-default.list ];
+    then sudo rm /etc/ros/rosdep/sources.list.d/20-default.list
+fi
 sudo rosdep init
 rosdep update
 
