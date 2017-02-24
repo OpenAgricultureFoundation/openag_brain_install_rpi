@@ -33,7 +33,7 @@ as follows:
 
 Running openag_brain happens through ROS, using the `rosrun` command:
 
-    rosrun openag_brain main
+    rosrun openag_brain main -f default
 
 `openag_python` commands are available globally via the `openag` command.
 
