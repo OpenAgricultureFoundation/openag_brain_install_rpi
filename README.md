@@ -1,3 +1,5 @@
+# DEPRECATED.
+
 openag\_brain\_install\_rpi
 ---------------------------
 
